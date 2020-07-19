@@ -1,2 +1,2 @@
 # JSLearning
-Udemy JS course and understanding of web fundamentals repo
+Web Fundamentals practice from various online platforms
