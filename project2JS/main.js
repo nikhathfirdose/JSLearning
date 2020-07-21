@@ -24,3 +24,18 @@ while (val < 3) {
   console.log(val++);
   console.log("post" + val);
 }
+
+function first() {
+  var v = 10;
+  let b = 10;
+  function sec() {
+    console.log("here" + a);
+    console.log("lll" + b);
+  }
+
+  sec();
+}
+// first();
+console.log(a);
+var a = 5;
+// console.log(b);
