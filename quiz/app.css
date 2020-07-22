@@ -8,7 +8,7 @@
   font-family: "Arial Narrow Bold", sans-serif;
   margin: 0;
   padding: 0;
-  color: #333;
+  color: rgb(85, 78, 78);
 }
 h1,
 h2,
@@ -45,6 +45,7 @@ h3 {
   align-items: center;
   max-width: 80rem;
   margin: 0 auto;
+  padding: 2rem;
   /* border: 2px solid black; */
 }
 .container > * {
@@ -77,7 +78,7 @@ h3 {
   padding: 1rem 0;
   width: 20rem;
   text-align: center;
-  border: 0.1rem solid #012346;
+  border: 0.2rem solid rgba(1, 35, 70, 0.66);
   margin-bottom: 1rem;
   text-decoration: none;
   color: #012346;
@@ -87,7 +88,7 @@ h3 {
 .button:hover {
   cursor: pointer;
   box-shadow: 0 0.4rem 1.4rem 0 rgba(5, 56, 107, 0.7);
-  transform: scale(1.02, 1);
+  transform: translateY(-0.1rem);
   transition: transform 150ms;
 }
 
