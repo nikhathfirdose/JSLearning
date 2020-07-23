@@ -1,7 +1,8 @@
 const quizQuestion = document.getElementById("question");
 
 const quizChoices = Array.from(document.getElementsByClassName("choice-text"));
-
+const questionCounterText = document.getElementById("questionCounter");
+const scoreText = document.getElementById("score");
 let currentQuestion = {};
 let acceptingAnswers = true;
 let score = 0;
@@ -48,17 +49,47 @@ startGame = () => {
   getNewQuestion();
 };
 getNewQuestion = () => {
+  if (availableQuestions.length === 0 || questionCounter >= maxQuestion) {
+    // end
+    return window.location.assign("/end.html");
+  }
   questionCounter++;
+  questionCounterText.innerText = `${questionCounter}/${maxQuestion}`;
   const questionIndex = Math.floor(Math.random() * availableQuestions.length);
   currentQuestion = availableQuestions[questionIndex];
   quizQuestion.innerText = currentQuestion.question;
-  getChoices();
-};
-getChoices = () => {
+
   quizChoices.forEach((choice) => {
     const number = choice.dataset["number"];
     choice.innerText = currentQuestion["choice" + number];
   });
-  availableQuestions.splice[(questionIndex, 1)];
+
+  availableQuestions.splice(questionIndex, 1);
+  acceptingAnswers = true;
+};
+quizChoices.forEach((choice) => {
+  choice.addEventListener("click", function (e) {
+    if (!acceptingAnswers) return;
+    acceptingAnswers = false;
+    const selectedChoice = e.target;
+    const selectedAnswer = selectedChoice.dataset["number"];
+    let classToApply = "incorrect";
+    if (selectedAnswer == currentQuestion.answer) {
+      classToApply = "correct";
+      incrementScore(correctBonus);
+    }
+    // let classToApply =
+    //   selectedAnswer == currentQuestion.answer ? "correct" : "incorrect";
+
+    selectedChoice.parentElement.classList.add(classToApply);
+    setTimeout(() => {
+      selectedChoice.parentElement.classList.remove(classToApply);
+      getNewQuestion();
+    }, 1000);
+  });
+});
+incrementScore = (num) => {
+  score += num;
+  scoreText.innerHTML = score;
 };
 startGame();

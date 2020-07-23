@@ -1,3 +1,6 @@
+#question {
+  color: #012346;
+}
 .choice-container {
   display: flex;
   margin-bottom: 0.5rem;
@@ -20,4 +23,25 @@
 }
 .choice-text {
   padding: 1.5rem;
+  width: 100%;
+}
+.correct {
+  background-color: yellowgreen;
+}
+.incorrect {
+  background-color: tomato;
+}
+
+/* HUD */
+
+#hud {
+  display: flex;
+  justify-content: space-between;
+}
+.hud-prefix {
+  font-size: 2rem;
+  text-align: center;
+}
+.hud-main-text {
+  text-align: center;
 }
