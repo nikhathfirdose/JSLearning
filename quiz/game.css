@@ -57,3 +57,22 @@
   background-color: #123456;
   width: 0%;
 }
+/* loader */
+
+#loader {
+  border: 0.4rem solid #ffffff;
+  border-radius: 50%;
+  border-top: 0.6rem solid #2474c5;
+  width: 4rem;
+  height: 4rem;
+  animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
