@@ -1,8 +1,9 @@
 const quizQuestion = document.getElementById("question");
 
 const quizChoices = Array.from(document.getElementsByClassName("choice-text"));
-const questionCounterText = document.getElementById("questionCounter");
+const progressText = document.getElementById("progress-text");
 const scoreText = document.getElementById("score");
+const progressBarFull = document.getElementById("progress-bar-full");
 let currentQuestion = {};
 let acceptingAnswers = true;
 let score = 0;
@@ -54,7 +55,9 @@ getNewQuestion = () => {
     return window.location.assign("/end.html");
   }
   questionCounter++;
-  questionCounterText.innerText = `${questionCounter}/${maxQuestion}`;
+  console.log(progressBarFull);
+  progressText.innerText = `Question:  ${questionCounter}/${maxQuestion}`;
+  progressBarFull.style.width = `${(questionCounter / maxQuestion) * 100}%`;
   const questionIndex = Math.floor(Math.random() * availableQuestions.length);
   currentQuestion = availableQuestions[questionIndex];
   quizQuestion.innerText = currentQuestion.question;
@@ -73,17 +76,18 @@ quizChoices.forEach((choice) => {
     acceptingAnswers = false;
     const selectedChoice = e.target;
     const selectedAnswer = selectedChoice.dataset["number"];
-    let classToApply = "incorrect";
+    let classAnswer = "incorrect";
+
     if (selectedAnswer == currentQuestion.answer) {
-      classToApply = "correct";
+      classAnswer = "correct";
       incrementScore(correctBonus);
     }
     // let classToApply =
     //   selectedAnswer == currentQuestion.answer ? "correct" : "incorrect";
 
-    selectedChoice.parentElement.classList.add(classToApply);
+    selectedChoice.parentElement.classList.add(classAnswer);
     setTimeout(() => {
-      selectedChoice.parentElement.classList.remove(classToApply);
+      selectedChoice.parentElement.classList.remove(classAnswer);
       getNewQuestion();
     }, 1000);
   });
