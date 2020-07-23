@@ -17,3 +17,5 @@ Quiz app Resource:
 
 6. JSON.stringify() : Local storage can only save strings, so storing objects requires that they be converted into strings using JSON. stringify before storing them.
    ==> JSON.stringify() convert [] to a str. But for it to behave as an object it has to be parsed ==> JSON.parse()
+
+7. remove staged files: git rm --cached [filename.js]
