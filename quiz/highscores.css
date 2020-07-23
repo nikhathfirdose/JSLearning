@@ -1,0 +1,13 @@
+#high-score-ul-list {
+  /* list-style: none; */
+  padding-left: 0;
+  margin-bottom: 4rem;
+}
+.high-score-list-data {
+  font-size: 2.2rem;
+  margin-bottom: 0.5rem;
+}
+.high-score-list-data:hover {
+  transform: scale(1.029);
+  cursor: pointer;
+}
