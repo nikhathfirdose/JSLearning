@@ -51,11 +51,12 @@ startGame = () => {
 };
 getNewQuestion = () => {
   if (availableQuestions.length === 0 || questionCounter >= maxQuestion) {
-    // end
-    return window.location.assign("/end.html");
+    localStorage.setItem("mostRecentScore", score);
+    console.log(window);
+    return window.location.assign("/quiz/end.html");
   }
   questionCounter++;
-  console.log(progressBarFull);
+  // console.log(progressBarFull);
   progressText.innerText = `Question:  ${questionCounter}/${maxQuestion}`;
   progressBarFull.style.width = `${(questionCounter / maxQuestion) * 100}%`;
   const questionIndex = Math.floor(Math.random() * availableQuestions.length);

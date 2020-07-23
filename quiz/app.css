@@ -8,7 +8,7 @@
   font-family: "Arial Narrow Bold", sans-serif;
   margin: 0;
   padding: 0;
-  color: rgb(85, 78, 78);
+  color: #012346;
 }
 h1,
 h2,
@@ -52,7 +52,7 @@ h3 {
   width: 100%;
 }
 
-.home-flex-center {
+.flex-center {
   justify-content: center;
   align-items: center;
 }
@@ -96,4 +96,25 @@ h3 {
   cursor: not-allowed;
   box-shadow: none;
   transform: none;
+}
+
+/* end */
+
+form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+input {
+  margin-bottom: 1rem;
+  padding: 1.5rem;
+  border: none;
+  width: 20rem;
+  font-size: 1.8rem;
+  box-shadow: 0 0rem 1rem 0 rgba(5, 56, 107, 0.5);
+}
+
+input::placeholder {
+  color: #aaa;
 }
