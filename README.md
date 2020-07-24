@@ -1,6 +1,6 @@
 # JSLearning
 
-Web Fundamentals practice from various online platforms
+Learning and Practice of core Web Fundamentals from various online platforms
 
 Quiz app Resource:
 
