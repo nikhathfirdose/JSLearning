@@ -118,3 +118,7 @@ input {
 input::placeholder {
   color: #aaa;
 }
+#user-message {
+  font-size: 2.2rem;
+  text-align: center;
+}

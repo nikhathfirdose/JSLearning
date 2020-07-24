@@ -16,12 +16,12 @@ let availableQuestions = [];
 // Constants
 
 const correctBonus = 10;
-const maxQuestion = 15;
+const maxQuestion = 10;
 
 let questions = [];
 
 fetch(
-  "https://opentdb.com/api.php?amount=15&category=9&difficulty=easy&type=multiple"
+  "https://opentdb.com/api.php?amount=10&category=18&difficulty=easy&type=multiple"
 )
   .then((res) => {
     return res.json();
@@ -74,7 +74,7 @@ getNewQuestion = () => {
   progressBarFull.style.width = `${(questionCounter / maxQuestion) * 100}%`;
   const questionIndex = Math.floor(Math.random() * availableQuestions.length);
   currentQuestion = availableQuestions[questionIndex];
-  quizQuestion.innerText = currentQuestion.question;
+  quizQuestion.innerText = `${questionCounter}. ${currentQuestion.question}`;
 
   quizChoices.forEach((choice) => {
     const number = choice.dataset["number"];
