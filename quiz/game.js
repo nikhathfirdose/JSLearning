@@ -4,6 +4,9 @@ const quizChoices = Array.from(document.getElementsByClassName("choice-text"));
 const progressText = document.getElementById("progress-text");
 const scoreText = document.getElementById("score");
 const progressBarFull = document.getElementById("progress-bar-full");
+const loader = document.getElementById("loader");
+const game = document.getElementById("game");
+
 let currentQuestion = {};
 let acceptingAnswers = true;
 let score = 0;
@@ -45,6 +48,7 @@ fetch(
 
       return formattedQuestion;
     });
+
     startGame();
   })
   .catch((err) => {
@@ -55,6 +59,8 @@ startGame = () => {
   score = 0;
   availableQuestions = [...questions];
   getNewQuestion();
+  game.classList.remove("hidden");
+  loader.classList.add("hidden");
 };
 getNewQuestion = () => {
   if (availableQuestions.length === 0 || questionCounter >= maxQuestion) {
