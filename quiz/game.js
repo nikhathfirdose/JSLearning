@@ -41,7 +41,7 @@ fetch(
         0,
         loadedQuestion.correct_answer
       );
-
+      console.log(loadedQuestion.correct_answer);
       answerChoices.forEach((choice, index) => {
         formattedQuestion["choice" + (index + 1)] = choice;
       });

@@ -8,9 +8,9 @@ const topPlayers = 5;
 
 userScore = localStorage.getItem("mostRecentScore");
 if (userScore >= 50) {
-  userMessage.innerHTML = `Congratulations on completing the quiz! </br> You have scored an overall ${userScore}% Enter username below to reach the leaderboard! `;
+  userMessage.innerHTML = `Congratulations!! You have scored an overall ${userScore}% </br> Enter username below to reach the leaderboard! `;
 } else {
-  userMessage.innerHTML = `Congratulations on completing the quiz! </br> You have scored an overall ${userScore}% Play again to increase score!`;
+  userMessage.innerHTML = `You have scored an overall ${userScore}% Play again to Increase score! </br> or Enter username below `;
 }
 // finalScore.innerText = mostRecentScore;
 username.addEventListener("keyup", () => {
