@@ -11,6 +11,9 @@
   padding: 0;
   box-sizing: border-box;
 }
+body {
+  overflow-x: hidden;
+}
 header {
   width: 100%;
   position: absolute;
@@ -28,4 +31,124 @@ header {
 }
 .logo a {
   font-family: "Lato", sans-serif;
+  font-size: 1.6rem;
+  font-weight: 860;
+  color: #6b1801;
+  text-decoration: none;
+  text-transform: uppercase;
+  outline: 0.2rem solid #6b1801;
+  letter-spacing: 0.11rem;
+  padding: 1rem 2rem;
+  background-color: #eee;
+  box-shadow: 0.5rem 0.5rem 1rem #cacaca;
+  cursor: default;
+}
+
+.menu {
+  height: 5rem;
+  width: 5rem;
+  background-color: #eee;
+  border-radius: 0.4rem;
+  box-shadow: 0.3rem 0.4rem 1rem #cacaca;
+  /* -0.3rem -0.3rem 1rem #fff; */
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2000;
+}
+.menu:hover {
+  box-shadow: inset 0.5rem 0.5rem 1rem #cacaca, inset -0.5rem -0.5rem 1rem #fff;
+}
+
+.bar {
+  width: 3rem;
+  height: 0.2rem;
+  background-color: #333;
+  display: inline-block;
+  position: relative;
+  transition: background-color 0.5s;
+}
+.bar::before,
+.bar::after {
+  content: "";
+  position: absolute;
+  width: inherit;
+  height: inherit;
+  background-color: #333;
+  transition: all 0.5s;
+}
+
+.bar::before {
+  top: -0.8rem;
+}
+.bar::after {
+  top: 0.8rem;
+}
+
+.open .bar {
+  background-color: transparent;
+}
+.open .bar::before {
+  top: 0;
+  transform: rotate(135deg);
+}
+.open .bar::after {
+  top: 0;
+  transform: rotate(-135deg);
+}
+
+.nav-list {
+  width: 50rem;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: #eee;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  box-shadow: -0.5rem 0 1rem rgba(0, 0, 0, 0.2);
+  z-index: 1500;
+  transition: transform 0.75s;
+  transform: translateX(55rem);
+}
+.open .nav-list {
+  transform: translateX(0);
+}
+.nav-item {
+  list-style: none;
+  border-bottom: 2px solid crimson;
+}
+
+.nav-link {
+  text-decoration: none;
+  display: block;
+  color: #333;
+  font-size: 1.6rem;
+  text-transform: uppercase;
+  padding: 0.5rem;
+  font-weight: 700;
+  transition: color 0.5s;
+}
+.nav-link:hover {
+  color: crimson;
+}
+.main {
+  width: 100%;
+  height: 100vh;
+  background: url("images/shopping-model.jpg") center no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+.main::after {
+  content: "";
+  position: absolute;
+  width: inherit;
+  height: inherit;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.4);
 }
