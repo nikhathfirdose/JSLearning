@@ -144,8 +144,16 @@ header {
   right: 0;
   top: 0;
   position: relative;
+  transition: linear 1.2s;
 }
-
+.img-style {
+  background: url("images/model-male.webp") right no-repeat;
+  background-size: 60% 100%;
+  right: 0;
+  top: 0;
+  position: relative;
+  transition: linear 1.2s;
+}
 .main::after {
   content: "";
   position: absolute;
@@ -164,7 +172,4 @@ header {
   left: 0;
   z-index: 10;
   clip-path: polygon(0 0, 64% 0, 50% 100%, 0% 100%);
-}
-.img-style {
-  background: url("images/boy.jpg") right no-repeat;
 }

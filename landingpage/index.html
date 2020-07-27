@@ -59,13 +59,14 @@
       menu.addEventListener("click", () => {
         mainNav.classList.toggle("open");
       });
-
-      setInterval(function () {
-        image.classList.add("img-style");
-        setInterval(() => {
+      function toggle() {
+        if (image.classList.contains("img-style")) {
           image.classList.remove("img-style");
-        }, 5000);
-      }, 3000);
+        } else {
+          image.classList.add("img-style");
+        }
+      }
+      setInterval(toggle, 3000);
     </script>
   </body>
 </html>
