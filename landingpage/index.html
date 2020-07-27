@@ -53,12 +53,19 @@
     </section>
     <script>
       const mainNav = document.querySelector(".main-nav");
-
+      const image = document.querySelector(".main");
       const menu = document.querySelector(".menu");
 
       menu.addEventListener("click", () => {
         mainNav.classList.toggle("open");
       });
+
+      setInterval(function () {
+        image.classList.add("img-style");
+        setInterval(() => {
+          image.classList.remove("img-style");
+        }, 5000);
+      }, 3000);
     </script>
   </body>
 </html>

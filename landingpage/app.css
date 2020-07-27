@@ -39,7 +39,7 @@ header {
   outline: 0.2rem solid #6b1801;
   letter-spacing: 0.11rem;
   padding: 1rem 2rem;
-  background-color: #eee;
+  background-color: #fff;
   box-shadow: 0.5rem 0.5rem 1rem #cacaca;
   cursor: default;
 }
@@ -99,12 +99,13 @@ header {
 }
 
 .nav-list {
-  width: 50rem;
+  padding: 3rem;
+  width: 30rem;
   height: 100vh;
   position: absolute;
   top: 0;
   right: 0;
-  background-color: #eee;
+  background-color: rgba(255, 255, 255, 0.5);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -138,8 +139,10 @@ header {
 .main {
   width: 100%;
   height: 100vh;
-  background: url("images/shopping-model.jpg") center no-repeat;
-  background-size: cover;
+  background: url("images/shopping-model.jpg") right no-repeat;
+  background-size: 60% 100%;
+  right: 0;
+  top: 0;
   position: relative;
 }
 
@@ -149,6 +152,19 @@ header {
   width: inherit;
   height: inherit;
   top: 0;
+  right: 10;
+  background-color: rgba(0, 0, 0, 0.1);
+}
+.main-clipped {
+  width: 80%;
+  height: inherit;
+  background-color: #eee;
+  position: absolute;
+  top: 0;
   left: 0;
-  background-color: rgba(0, 0, 0, 0.4);
+  z-index: 10;
+  clip-path: polygon(0 0, 64% 0, 50% 100%, 0% 100%);
+}
+.img-style {
+  background: url("images/boy.jpg") right no-repeat;
 }
