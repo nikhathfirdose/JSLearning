@@ -144,7 +144,7 @@ header {
   right: 0;
   top: 0;
   position: relative;
-  transition: linear 1.2s;
+  transition: all 1s;
 }
 .img-style {
   background: url("images/model-male.webp") right no-repeat;
@@ -152,7 +152,7 @@ header {
   right: 0;
   top: 0;
   position: relative;
-  transition: linear 1.2s;
+  transition: linear 1s;
 }
 .main::after {
   content: "";
@@ -172,4 +172,18 @@ header {
   left: 0;
   z-index: 10;
   clip-path: polygon(0 0, 64% 0, 50% 100%, 0% 100%);
+  /* transform-origin: right; */
+}
+.main-textbox {
+  width: 50%;
+  position: absolute;
+  top: 50%;
+  left: 0%;
+  transform: translate(10%, -50%);
+  text-transform: uppercase;
+  text-align: center;
+  line-height: 1.8;
+  color: #333;
+  padding: 1rem;
+  z-index: 20;
 }
