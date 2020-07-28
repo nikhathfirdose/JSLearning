@@ -2,7 +2,7 @@
 
 Learning and Practice of core Web Fundamentals from various online platforms
 
-Quiz app Resource:
+QuizMania-App Resource:
 
 1. CSS transitions and transforms: https://thoughtbot.com/blog/transitions-and-transforms
 2. Use of data-member Property: https://www.devart.com/dotconnect/sqlite/docs/Devart.Data~Devart.Data.DataLink~DataMember.html
@@ -19,3 +19,8 @@ Quiz app Resource:
    ==> JSON.stringify() convert [] to a str. But for it to behave as an object it has to be parsed ==> JSON.parse()
 
 7. remove staged files: git rm --cached [filename.js]
+
+ShopOnine-App Resource:
+
+1. Free images: https://www.pexels.com/
+2. Transition and Transform brush up topics: https://thoughtbot.com/blog/transitions-and-transforms
