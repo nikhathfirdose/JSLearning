@@ -46,11 +46,12 @@
       <div class="main-clipped">
         <div class="main-textbox">
           <h1 class="main-heading">Fabricate Fashion</h1>
-          <h2 class="sub-heading">Get the best fashion clothes here</h2>
+          <h2 class="sub-heading">Get the best fashion clothes here!</h2>
           <a href="#" class="cta-btn">Learn More</a>
         </div>
       </div>
     </section>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.4.2/gsap.min.js"></script>
     <script>
       const mainNav = document.querySelector(".main-nav");
       const image = document.querySelector(".main");
@@ -66,7 +67,17 @@
           image.classList.add("img-style");
         }
       }
-      setInterval(toggle, 4000);
+      setInterval(toggle, 3000);
+      gsap.fromTo(
+        ".logo",
+        { x: -100, opacity: 0 },
+        { duration: 1, delay: 0.5, x: 0, opacity: 1 }
+      );
+      gsap.fromTo(
+        ".main-textbox",
+        { yPercent: 10, opacity: 0 },
+        { duration: 1, delay: 1.3, yPercent: -25, opacity: 1 }
+      );
     </script>
   </body>
 </html>
