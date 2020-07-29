@@ -1,0 +1,22 @@
+{
+  "id": 101,
+  "name": "raj",
+  "class": "8th grade",
+  "age": 12,
+  "isNRI": false,
+  "Address": {
+    "line1": "xyz",
+    "line2": "abc",
+    "pincode": 560077,
+    "city": "bangalore",
+    "country": "india"
+  },
+  "Phno": 123456789,
+  "PaidFees": null,
+  "arrayObj": [{ "j": 1 }, { "j": 2 }, { "j": 3 }],
+  "arrayArr": [
+    [4, 5, 6],
+    [1, 2, 3],
+    [7, 8, 9]
+  ]
+}
