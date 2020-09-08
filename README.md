@@ -21,7 +21,6 @@ QuizMania-App Resource:
 7. remove staged files: git rm --cached [filename.js]
 
 ShopOnine-App Resource:
-
 1. Free images: https://www.pexels.com/
 2. Transition and Transform brush up topics: https://thoughtbot.com/blog/transitions-and-transforms
 3. JSON online tool: jsonlint, jsoneditoronline.org
